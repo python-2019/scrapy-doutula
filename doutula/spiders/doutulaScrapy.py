@@ -16,7 +16,7 @@ class doutulaScrapy(scrapy.Spider):
 
     def parse(self, response):
         item = DoutulaItem()
-        item['image_list'] = response.xpath("//a[@class='col-xs-6 col-sm-3']/img[@class='img-responsive lazy image_dta loaded']/@src").extract()
+        item['image_list'] = response.xpath("//div[@class='page-content text-center']/div/a/img/@data-original").extract()
         yield item
         #     翻页
         next_page = response.xpath("//a[contains(text(),'›')]/@href").extract_first()
