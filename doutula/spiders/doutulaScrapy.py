@@ -6,7 +6,7 @@ import scrapy
 from doutula.items import DoutulaItem
 
 
-class doutulaSpider(scrapy.Spider):
+class doutulaScrapy(scrapy.Spider):
     name = 'doutula'
     allowed_domains = ["www.doutula.com"]
     host = "http://www.doutula.com"

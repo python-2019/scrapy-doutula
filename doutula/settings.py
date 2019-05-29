@@ -15,7 +15,8 @@ SPIDER_MODULES = ['doutula.spiders']
 NEWSPIDER_MODULE = 'doutula.spiders'
 LOG_LEVEL = 'WARNING'
 # 设置存放图片的路径
-IMAGES_STORE = 'C:\\Users\\1\\Desktop\\img'
+# IMAGES_STORE = 'C:\\Users\\1\\Desktop\\img'
+IMAGES_STORE = 'C:\\Users\\Administrator\\Desktop\\img'
 ITEM_PIPELINES = {
    'doutula.pipelines.DoutulaPipeline': 300,
 }

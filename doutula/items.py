@@ -11,4 +11,4 @@ import scrapy
 class DoutulaItem(scrapy.Item):
     # define the fields for your item here like:
     image_list = scrapy.Field()
-    image_path = scrapy.Field()  # 图片本地存储路径(相对路径)
+    # image_path = scrapy.Field()  # 图片本地存储路径(相对路径)

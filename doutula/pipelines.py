@@ -4,7 +4,6 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-import re
 
 import scrapy
 from scrapy.exceptions import DropItem
@@ -23,5 +22,4 @@ class DoutulaPipeline(ImagesPipeline):
         image_path = [x['path'] for ok, x in results if ok]
         if not image_path:
             raise DropItem("Item contains no images")
-        item['image_path'] = image_path
         return item
