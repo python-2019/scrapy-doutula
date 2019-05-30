@@ -20,6 +20,9 @@ IMAGES_STORE = 'C:\\Users\\1\\Desktop\\img'
 ITEM_PIPELINES = {
    'doutula.pipelines.DoutulaPipeline': 300,
 }
+DOWNLOADER_MIDDLEWARES = {
+   'doutula.middlewares.ProcessAllExceptionMiddleware': 543,
+}
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'doutula (+http://www.yourdomain.com)'
 

@@ -12,7 +12,7 @@ class doutulaScrapy(scrapy.Spider):
     allowed_domains = ["www.doutula.com"]
     host = "http://www.doutula.com"
     # 初始化爬取页码
-    page = "?page=1"
+    page = "?page=220"
     start_urls = (
         host + "/photo/list/"+page,
     )
