@@ -7,16 +7,20 @@ from doutula.items import DoutulaItem
 
 
 class doutulaScrapy(scrapy.Spider):
+
     name = 'doutula'
     allowed_domains = ["www.doutula.com"]
     host = "http://www.doutula.com"
+    # 初始化爬取页码
+    page = "?page=1"
     start_urls = (
-        host + "/photo/list/",
+        host + "/photo/list/"+page,
     )
 
     def parse(self, response):
         item = DoutulaItem()
-        item['image_list'] = response.xpath("//div[@class='page-content text-center']/div/a/img/@data-original").extract()
+        item['image_list'] = response.xpath(
+            "//div[@class='page-content text-center']/div/a/img/@data-original").extract()
         yield item
         #     翻页
         next_page = response.xpath("//a[contains(text(),'›')]/@href").extract_first()
